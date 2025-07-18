@@ -1,0 +1,58 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #ffe6e6;
+}
+
+.container {
+    text-align: center;
+    background-color: white;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+h3 {
+    margin-bottom: 2rem;
+    font-size: 1.4rem;
+    color: #333;
+}
+
+button {
+    padding: 0.8rem 2rem;
+    margin: 0.5rem;
+    font-size: 1rem;
+    background-color: #ff4d4d;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    position: relative; /* Required for z-index to work */
+}
+
+#yes {
+    z-index: 10; /* Ensures it stays above */
+}
+
+#no {
+    z-index: 1;
+}
+
+button:hover {
+    background-color: #ff1a1a;
+    transform: scale(1.05);
+}
+
+button:active {
+    transform: scale(0.95);
+}
