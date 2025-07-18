@@ -7,7 +7,6 @@
   <script src="https://kit.fontawesome.com/c4631e16f3.js" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
   <style>
-    /* --- CSS from previous response --- */
     body {
       min-height: 100vh;
       overflow-x: hidden;
@@ -81,52 +80,48 @@
       text-align: left;
       font-size: 1.2rem;
       z-index: 10;
-          color: #333;
-    line-height: 1.6;
-    overflow-y: auto;
-
+      color: #333;
+      line-height: 1.6;
+      overflow-y: auto;
     }
 
-  .letter-contents h2 {
-    text-align: center;
-    margin-bottom: 1rem;
-    color: red;
-  }
+    .letter-contents h2 {
+      text-align: center;
+      margin-bottom: 1rem;
+      color: red;
+    }
+
     .letter:hover .letter-contents {
       opacity: 1;
       pointer-events: auto;
     }
 
-/* Base styles (desktop/tablet) here... */
+    @media (max-width: 480px) {
+      .letter {
+        width: 90vw;
+        height: auto;
+        min-height: 60vh;
+        padding: 1rem;
+        border-width: 3px;
+        border-radius: 8px;
+      }
 
-@media (max-width: 480px) {
-  .letter {
-    width: 90vw;        /* narrower on small screens */
-    height: auto;       /* allow height to adjust */
-    min-height: 60vh;   /* some minimum height */
-    padding: 1rem;
-    border-width: 3px;  /* thinner border */
-    border-radius: 8px;
-  }
+      .shape-top {
+        border-left: 45vw solid transparent;
+        border-right: 45vw solid transparent;
+      }
 
-  .shape-top {
-    border-left: 45vw solid transparent;
-    border-right: 45vw solid transparent;
-    border-bottom: 30vh solid red;
-  }
+      .letter-contents {
+        height: auto;
+        max-height: 70vh;
+        font-size: 1rem;
+        padding: 1rem;
+      }
 
-  .letter-contents {
-    height: auto;
-    max-height: 70vh;
-    font-size: 1rem;    /* slightly smaller font */
-    padding: 1rem;
-  }
-
-  .letter-contents h2 {
-    font-size: 1.4rem;
-  }
-}
-
+      .letter-contents h2 {
+        font-size: 1.4rem;
+      }
+    }
   </style>
 </head>
 <body>
@@ -174,9 +169,10 @@
 
     <p data-aos="fade-up" data-aos-duration="1500" data-aos-delay="1000">
       – Someone who silently likes you
-    </p>     </div>
+    </p>
+    </div>
   </div>
-
+<!-- Made by alex :P -->
   <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
 <script>
   AOS.init({offset:0});
@@ -187,7 +183,7 @@
   letter.addEventListener('mouseenter', () => {
     aosElements.forEach(el => {
       el.classList.remove('aos-animate');
-      void el.offsetWidth;  // trigger reflow
+      void el.offsetWidth;
       el.classList.add('aos-animate');
     });
   });
