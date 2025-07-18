@@ -1,0 +1,29 @@
+/* Base styles (desktop/tablet) here... */
+
+@media (max-width: 480px) {
+  .letter {
+    width: 90vw;        /* narrower on small screens */
+    height: auto;       /* allow height to adjust */
+    min-height: 60vh;   /* some minimum height */
+    padding: 1rem;
+    border-width: 3px;  /* thinner border */
+    border-radius: 8px;
+  }
+
+  .shape-top {
+    border-left: 45vw solid transparent;
+    border-right: 45vw solid transparent;
+    border-bottom: 30vh solid red;
+  }
+
+  .letter-contents {
+    height: auto;
+    max-height: 70vh;
+    font-size: 1rem;    /* slightly smaller font */
+    padding: 1rem;
+  }
+
+  .letter-contents h2 {
+    font-size: 1.4rem;
+  }
+}
